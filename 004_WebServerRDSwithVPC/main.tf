@@ -90,7 +90,7 @@ resource "aws_instance" "app_server" {  # Create the WebServer instance
   instance_type = "t3.micro"                                # Free-tier instance type
   subnet_id     = aws_subnet.main.id                        # Attach to the main subnet
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]   # Attach the ec2 security group
-  key_name = "ssh-ec2-keypair"                              # Assign keypait for SSH access
+  key_name = "ssh-ec2-keypair"                              # Assign keypair for SSH access
 
   tags = {
     Name = "MyWebServerFromTerraform"
